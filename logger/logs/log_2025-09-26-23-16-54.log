@@ -1,0 +1,240 @@
+[2025-09-26 23:17:43,525] CustomBot - INFO - User: python code for snake game
+[2025-09-26 23:17:43,526] CustomBot - INFO - User: python code for snake game
+[2025-09-26 23:17:43,526] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 23:17:45,725] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 23:17:45,725] CustomBot - INFO - Assistant: Here's a simple implementation of the Snake game in Python using the Pygame library.
+
+**Game Description:**
+The game is a single-player game where the player controls a snake that can move up, down, left, or right. The snake's goal is to eat the food pellets that appear on the screen. Each time the snake eats a food pellet, it grows longer. The game ends if the snake runs into the edge of the screen or into itself.
+
+**Code:**
+
+```python
+import pygame
+import sys
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Set up some constants
+WIDTH = 800
+HEIGHT = 600
+SPEED = 20
+
+# Create the game screen
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+# Set up the font
+font = pygame.font.Font(None, 36)
+
+# Set up the snake
+snake = [(200, 200), (220, 200), (240, 200)]
+direction = 'right'
+
+# Set up the food
+food = (400, 300)
+
+# Game loop
+while True:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP and direction != 'down':
+                direction = 'up'
+            elif event.key == pygame.K_DOWN and direction != 'up':
+                direction = 'down'
+            elif event.key == pygame.K_LEFT and direction != 'right':
+                direction = 'left'
+            elif event.key == pygame.K_RIGHT and direction != 'left':
+                direction = 'right'
+
+    # Move the snake
+    head = snake[-1]
+    if direction == 'up':
+        new_head = (head[0], head[1] - 20)
+    elif direction == 'down':
+        new_head = (head[0], head[1] + 20)
+    elif direction == 'left':
+        new_head = (head[0] - 20, head[1])
+    elif direction == 'right':
+        new_head = (head[0] + 20, head[1])
+
+    snake.append(new_head)
+
+    # Check for collision with the edge of the screen
+    if (new_head[0] < 0 or new_head[0] >= WIDTH or
+            new_head[1] < 0 or new_head[1] >= HEIGHT):
+        print('Game over!')
+        pygame.quit()
+        sys.exit()
+
+    # Check for collision with itself
+    if new_head in snake[:-1]:
+        print('Game over!')
+        pygame.quit()
+        sys.exit()
+
+    # Check if the snake ate the food
+    if new_head == food:
+        # Generate new food
+        food = (random.randint(0, WIDTH - 20) // 20 * 20,
+                random.randint(0, HEIGHT - 20) // 20 * 20)
+    else:
+        # Remove the tail of the snake
+        snake.pop(0)
+
+    # Draw everything
+    screen.fill((0, 0, 0))
+    for pos in snake:
+        pygame.draw.rect(screen, (0, 255, 0), (pos[0], pos[1], 20, 20))
+    pygame.draw.rect(screen, (255, 0, 0), (food[0], food[1], 20, 20))
+    text = font.render(f'Score: {len(snake) - 3}', True, (255, 255, 255))
+    screen.blit(text, (10, 10))
+
+    # Update the display
+    pygame.display.flip()
+
+    # Cap the frame rate
+    pygame.time.Clock().tick(SPEED)
+```
+
+**Explanation:**
+
+1. The game uses a simple game loop that handles events, moves the snake, and draws everything on the screen.
+2. The snake is represented as a list of positions, where each position is a pair of x and y coordinates.
+3. The food is represented as a single position, which is a pair of x and y coordinates.
+4. The game checks for collision with the edge of the screen and with itself.
+5. If the snake eats the food, it generates new food and grows longer. Otherwise, it removes the tail of the snake.
+6. The game draws everything on the screen, including the snake, the food, and the score.
+7. The game uses a clock to cap the frame rate at 20 frames per second.
+
+**Example Use Cases:**
+
+* Run the game by executing the code.
+* Use the arrow keys to control the snake.
+* Eat the food pellets to grow longer.
+* Avoid running into the edge of the screen or into yourself.
+
+Note: This is a basic implementation of the Snake game, and you can add additional features such as levels, obstacles, and scoring.
+[2025-09-26 23:17:45,727] CustomBot - INFO - Assistant: Here's a simple implementation of the Snake game in Python using the Pygame library.
+
+**Game Description:**
+The game is a single-player game where the player controls a snake that can move up, down, left, or right. The snake's goal is to eat the food pellets that appear on the screen. Each time the snake eats a food pellet, it grows longer. The game ends if the snake runs into the edge of the screen or into itself.
+
+**Code:**
+
+```python
+import pygame
+import sys
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Set up some constants
+WIDTH = 800
+HEIGHT = 600
+SPEED = 20
+
+# Create the game screen
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+# Set up the font
+font = pygame.font.Font(None, 36)
+
+# Set up the snake
+snake = [(200, 200), (220, 200), (240, 200)]
+direction = 'right'
+
+# Set up the food
+food = (400, 300)
+
+# Game loop
+while True:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP and direction != 'down':
+                direction = 'up'
+            elif event.key == pygame.K_DOWN and direction != 'up':
+                direction = 'down'
+            elif event.key == pygame.K_LEFT and direction != 'right':
+                direction = 'left'
+            elif event.key == pygame.K_RIGHT and direction != 'left':
+                direction = 'right'
+
+    # Move the snake
+    head = snake[-1]
+    if direction == 'up':
+        new_head = (head[0], head[1] - 20)
+    elif direction == 'down':
+        new_head = (head[0], head[1] + 20)
+    elif direction == 'left':
+        new_head = (head[0] - 20, head[1])
+    elif direction == 'right':
+        new_head = (head[0] + 20, head[1])
+
+    snake.append(new_head)
+
+    # Check for collision with the edge of the screen
+    if (new_head[0] < 0 or new_head[0] >= WIDTH or
+            new_head[1] < 0 or new_head[1] >= HEIGHT):
+        print('Game over!')
+        pygame.quit()
+        sys.exit()
+
+    # Check for collision with itself
+    if new_head in snake[:-1]:
+        print('Game over!')
+        pygame.quit()
+        sys.exit()
+
+    # Check if the snake ate the food
+    if new_head == food:
+        # Generate new food
+        food = (random.randint(0, WIDTH - 20) // 20 * 20,
+                random.randint(0, HEIGHT - 20) // 20 * 20)
+    else:
+        # Remove the tail of the snake
+        snake.pop(0)
+
+    # Draw everything
+    screen.fill((0, 0, 0))
+    for pos in snake:
+        pygame.draw.rect(screen, (0, 255, 0), (pos[0], pos[1], 20, 20))
+    pygame.draw.rect(screen, (255, 0, 0), (food[0], food[1], 20, 20))
+    text = font.render(f'Score: {len(snake) - 3}', True, (255, 255, 255))
+    screen.blit(text, (10, 10))
+
+    # Update the display
+    pygame.display.flip()
+
+    # Cap the frame rate
+    pygame.time.Clock().tick(SPEED)
+```
+
+**Explanation:**
+
+1. The game uses a simple game loop that handles events, moves the snake, and draws everything on the screen.
+2. The snake is represented as a list of positions, where each position is a pair of x and y coordinates.
+3. The food is represented as a single position, which is a pair of x and y coordinates.
+4. The game checks for collision with the edge of the screen and with itself.
+5. If the snake eats the food, it generates new food and grows longer. Otherwise, it removes the tail of the snake.
+6. The game draws everything on the screen, including the snake, the food, and the score.
+7. The game uses a clock to cap the frame rate at 20 frames per second.
+
+**Example Use Cases:**
+
+* Run the game by executing the code.
+* Use the arrow keys to control the snake.
+* Eat the food pellets to grow longer.
+* Avoid running into the edge of the screen or into yourself.
+
+Note: This is a basic implementation of the Snake game, and you can add additional features such as levels, obstacles, and scoring.

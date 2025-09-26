@@ -1,0 +1,266 @@
+[2025-09-26 23:07:25,272] CustomBot - INFO - User: python code for ai ml
+[2025-09-26 23:07:25,273] CustomBot - INFO - User: python code for ai ml
+[2025-09-26 23:07:25,273] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 23:07:27,792] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 23:07:27,792] CustomBot - INFO - Assistant: Here are some examples of Python code for AI and ML:
+
+**Example 1: Simple Linear Regression using Scikit-Learn**
+
+```python
+# Import necessary libraries
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import numpy as np
+
+# Generate some random data
+np.random.seed(0)
+X = np.random.rand(100, 1)
+y = 3 + 2 * X + np.random.randn(100, 1)
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and train a linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions and evaluate the model
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print(f"Mean Squared Error: {mse}")
+```
+
+This code uses Scikit-Learn to train a simple linear regression model on some randomly generated data.
+
+**Example 2: Image Classification using TensorFlow and Keras**
+
+```python
+# Import necessary libraries
+import tensorflow as tf
+from tensorflow import keras
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+import numpy as np
+
+# Load the MNIST dataset
+(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+
+# Reshape the data and normalize the pixel values
+X_train = X_train.reshape(-1, 28, 28, 1).astype('float32') / 255.0
+X_test = X_test.reshape(-1, 28, 28, 1).astype('float32') / 255.0
+
+# Define a convolutional neural network (CNN) model
+model = keras.models.Sequential([
+    keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    keras.layers.MaxPooling2D((2, 2)),
+    keras.layers.Flatten(),
+    keras.layers.Dense(64, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile and train the model
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=5, batch_size=128)
+
+# Evaluate the model
+y_pred = model.predict(X_test)
+y_pred_class = np.argmax(y_pred, axis=1)
+accuracy = accuracy_score(y_test, y_pred_class)
+print(f"Test Accuracy: {accuracy:.2f}")
+```
+
+This code uses TensorFlow and Keras to train a convolutional neural network (CNN) on the MNIST dataset for image classification.
+
+**Example 3: Natural Language Processing (NLP) using NLTK and spaCy**
+
+```python
+# Import necessary libraries
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+import spacy
+
+# Load the spacy English language model
+nlp = spacy.load('en_core_web_sm')
+
+# Define a sample text
+text = "This is an example sentence for natural language processing."
+
+# Tokenize the text
+tokens = word_tokenize(text)
+
+# Remove stopwords
+stop_words = set(stopwords.words('english'))
+filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
+
+# Perform named entity recognition (NER) using spaCy
+doc = nlp(text)
+named_entities = [(entity.text, entity.label_) for entity in doc.ents]
+
+print("Filtered Tokens:", filtered_tokens)
+print("Named Entities:", named_entities)
+```
+
+This code uses NLTK and spaCy for natural language processing (NLP) tasks such as tokenization, stopword removal, and named entity recognition (NER).
+
+**Example 4: Clustering using Scikit-Learn**
+
+```python
+# Import necessary libraries
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+import matplotlib.pyplot as plt
+
+# Generate some sample data
+X, y = make_blobs(n_samples=200, centers=3, n_features=2, random_state=0)
+
+# Define a K-means clustering model
+model = KMeans(n_clusters=3, random_state=0)
+
+# Fit the model to the data
+model.fit(X)
+
+# Predict cluster labels
+labels = model.predict(X)
+
+# Plot the clusters
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+plt.scatter(model.cluster_centers_[:, 0], model.cluster_centers_[:, 1], c='red', marker='x')
+plt.show()
+```
+
+This code uses Scikit-Learn to perform K-means clustering on some sample data.
+
+These examples demonstrate the use of Python for various AI and ML tasks, including linear regression, image classification, natural language processing, and clustering.
+[2025-09-26 23:07:27,793] CustomBot - INFO - Assistant: Here are some examples of Python code for AI and ML:
+
+**Example 1: Simple Linear Regression using Scikit-Learn**
+
+```python
+# Import necessary libraries
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import numpy as np
+
+# Generate some random data
+np.random.seed(0)
+X = np.random.rand(100, 1)
+y = 3 + 2 * X + np.random.randn(100, 1)
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and train a linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions and evaluate the model
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print(f"Mean Squared Error: {mse}")
+```
+
+This code uses Scikit-Learn to train a simple linear regression model on some randomly generated data.
+
+**Example 2: Image Classification using TensorFlow and Keras**
+
+```python
+# Import necessary libraries
+import tensorflow as tf
+from tensorflow import keras
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+import numpy as np
+
+# Load the MNIST dataset
+(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+
+# Reshape the data and normalize the pixel values
+X_train = X_train.reshape(-1, 28, 28, 1).astype('float32') / 255.0
+X_test = X_test.reshape(-1, 28, 28, 1).astype('float32') / 255.0
+
+# Define a convolutional neural network (CNN) model
+model = keras.models.Sequential([
+    keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    keras.layers.MaxPooling2D((2, 2)),
+    keras.layers.Flatten(),
+    keras.layers.Dense(64, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile and train the model
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=5, batch_size=128)
+
+# Evaluate the model
+y_pred = model.predict(X_test)
+y_pred_class = np.argmax(y_pred, axis=1)
+accuracy = accuracy_score(y_test, y_pred_class)
+print(f"Test Accuracy: {accuracy:.2f}")
+```
+
+This code uses TensorFlow and Keras to train a convolutional neural network (CNN) on the MNIST dataset for image classification.
+
+**Example 3: Natural Language Processing (NLP) using NLTK and spaCy**
+
+```python
+# Import necessary libraries
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+import spacy
+
+# Load the spacy English language model
+nlp = spacy.load('en_core_web_sm')
+
+# Define a sample text
+text = "This is an example sentence for natural language processing."
+
+# Tokenize the text
+tokens = word_tokenize(text)
+
+# Remove stopwords
+stop_words = set(stopwords.words('english'))
+filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
+
+# Perform named entity recognition (NER) using spaCy
+doc = nlp(text)
+named_entities = [(entity.text, entity.label_) for entity in doc.ents]
+
+print("Filtered Tokens:", filtered_tokens)
+print("Named Entities:", named_entities)
+```
+
+This code uses NLTK and spaCy for natural language processing (NLP) tasks such as tokenization, stopword removal, and named entity recognition (NER).
+
+**Example 4: Clustering using Scikit-Learn**
+
+```python
+# Import necessary libraries
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+import matplotlib.pyplot as plt
+
+# Generate some sample data
+X, y = make_blobs(n_samples=200, centers=3, n_features=2, random_state=0)
+
+# Define a K-means clustering model
+model = KMeans(n_clusters=3, random_state=0)
+
+# Fit the model to the data
+model.fit(X)
+
+# Predict cluster labels
+labels = model.predict(X)
+
+# Plot the clusters
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+plt.scatter(model.cluster_centers_[:, 0], model.cluster_centers_[:, 1], c='red', marker='x')
+plt.show()
+```
+
+This code uses Scikit-Learn to perform K-means clustering on some sample data.
+
+These examples demonstrate the use of Python for various AI and ML tasks, including linear regression, image classification, natural language processing, and clustering.

@@ -1,0 +1,210 @@
+[2025-09-26 16:20:20,853] CustomBot - INFO - User: i am very happy
+[2025-09-26 16:20:20,854] CustomBot - INFO - User: i am very happy
+[2025-09-26 16:20:20,854] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:20:21,484] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:20:21,484] CustomBot - INFO - Assistant: That's great to hear.
+[2025-09-26 16:20:21,484] CustomBot - INFO - Assistant: That's great to hear.
+[2025-09-26 16:21:31,444] CustomBot - INFO - User: i am happy
+[2025-09-26 16:21:31,445] CustomBot - INFO - User: i am happy
+[2025-09-26 16:21:31,445] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:21:32,096] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:21:32,096] CustomBot - INFO - Assistant: That's great to hear.
+[2025-09-26 16:21:32,096] CustomBot - INFO - Assistant: That's great to hear.
+[2025-09-26 16:22:41,395] CustomBot - INFO - User: hello
+[2025-09-26 16:22:41,396] CustomBot - INFO - User: hello
+[2025-09-26 16:22:41,396] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:22:42,220] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:22:42,220] CustomBot - INFO - Assistant: Hello
+[2025-09-26 16:22:42,221] CustomBot - INFO - Assistant: Hello
+[2025-09-26 16:23:07,124] CustomBot - INFO - User: how to download python from cratcvh
+[2025-09-26 16:23:07,125] CustomBot - INFO - User: how to download python from cratcvh
+[2025-09-26 16:23:07,125] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:23:07,555] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:23:07,555] CustomBot - INFO - Assistant: Visit the official Python website (python.org) to download the latest version. Cratevch is not a valid source.
+[2025-09-26 16:23:07,555] CustomBot - INFO - Assistant: Visit the official Python website (python.org) to download the latest version. Cratevch is not a valid source.
+[2025-09-26 16:23:25,172] CustomBot - INFO - User: create a simple streamlit app.py file
+[2025-09-26 16:23:25,172] CustomBot - INFO - User: create a simple streamlit app.py file
+[2025-09-26 16:23:25,172] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:23:25,528] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:23:25,528] CustomBot - INFO - Assistant: ```python
+# app.py
+import streamlit as st
+
+st.title("Simple Streamlit App")
+st.write("Hello, World!")
+```
+[2025-09-26 16:23:25,528] CustomBot - INFO - Assistant: ```python
+# app.py
+import streamlit as st
+
+st.title("Simple Streamlit App")
+st.write("Hello, World!")
+```
+[2025-09-26 16:23:41,140] CustomBot - INFO - User: create a calcualtor code in python
+[2025-09-26 16:23:41,140] CustomBot - INFO - User: create a calcualtor code in python
+[2025-09-26 16:23:41,141] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:23:42,549] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:23:42,550] CustomBot - INFO - Assistant: **Calculator Code in Python**
+=====================================
+
+Below is a simple implementation of a calculator in Python:
+
+```python
+# calculator.py
+
+def add(x, y):
+    """Return the sum of x and y"""
+    return x + y
+
+def subtract(x, y):
+    """Return the difference of x and y"""
+    return x - y
+
+def multiply(x, y):
+    """Return the product of x and y"""
+    return x * y
+
+def divide(x, y):
+    """Return the quotient of x and y"""
+    if y == 0:
+        return "Error: Division by zero"
+    return x / y
+
+def calculator():
+    print("Simple Calculator")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+
+    choice = input("Enter your choice (1/2/3/4): ")
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+    else:
+        print("Invalid choice")
+
+if __name__ == "__main__":
+    calculator()
+```
+
+**How it works:**
+
+1. The code defines four functions: `add`, `subtract`, `multiply`, and `divide`, each performing a basic arithmetic operation.
+2. The `calculator` function is the main entry point. It prompts the user to choose an operation and input two numbers.
+3. Based on the user's choice, the corresponding function is called with the input numbers, and the result is printed.
+
+**Example Use Cases:**
+
+* Addition: Enter `1` as the choice, then input `10` and `5` as the numbers. The output will be `10 + 5 = 15.0`.
+* Subtraction: Enter `2` as the choice, then input `20` and `8` as the numbers. The output will be `20 - 8 = 12.0`.
+* Multiplication: Enter `3` as the choice, then input `4` and `9` as the numbers. The output will be `4 * 9 = 36.0`.
+* Division: Enter `4` as the choice, then input `12` and `3` as the numbers. The output will be `12 / 3 = 4.0`.
+
+Note: This is a basic implementation, and you can enhance it by adding more features, such as handling invalid inputs or implementing more advanced arithmetic operations.
+[2025-09-26 16:23:42,550] CustomBot - INFO - Assistant: **Calculator Code in Python**
+=====================================
+
+Below is a simple implementation of a calculator in Python:
+
+```python
+# calculator.py
+
+def add(x, y):
+    """Return the sum of x and y"""
+    return x + y
+
+def subtract(x, y):
+    """Return the difference of x and y"""
+    return x - y
+
+def multiply(x, y):
+    """Return the product of x and y"""
+    return x * y
+
+def divide(x, y):
+    """Return the quotient of x and y"""
+    if y == 0:
+        return "Error: Division by zero"
+    return x / y
+
+def calculator():
+    print("Simple Calculator")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+
+    choice = input("Enter your choice (1/2/3/4): ")
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+    else:
+        print("Invalid choice")
+
+if __name__ == "__main__":
+    calculator()
+```
+
+**How it works:**
+
+1. The code defines four functions: `add`, `subtract`, `multiply`, and `divide`, each performing a basic arithmetic operation.
+2. The `calculator` function is the main entry point. It prompts the user to choose an operation and input two numbers.
+3. Based on the user's choice, the corresponding function is called with the input numbers, and the result is printed.
+
+**Example Use Cases:**
+
+* Addition: Enter `1` as the choice, then input `10` and `5` as the numbers. The output will be `10 + 5 = 15.0`.
+* Subtraction: Enter `2` as the choice, then input `20` and `8` as the numbers. The output will be `20 - 8 = 12.0`.
+* Multiplication: Enter `3` as the choice, then input `4` and `9` as the numbers. The output will be `4 * 9 = 36.0`.
+* Division: Enter `4` as the choice, then input `12` and `3` as the numbers. The output will be `12 / 3 = 4.0`.
+
+Note: This is a basic implementation, and you can enhance it by adding more features, such as handling invalid inputs or implementing more advanced arithmetic operations.
+[2025-09-26 16:24:16,579] CustomBot - INFO - User: create a basic app.py file
+[2025-09-26 16:24:16,580] CustomBot - INFO - User: create a basic app.py file
+[2025-09-26 16:24:16,580] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:24:17,254] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:24:17,255] CustomBot - INFO - Assistant: ```python
+# app.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run()
+```
+[2025-09-26 16:24:17,255] CustomBot - INFO - Assistant: ```python
+# app.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run()
+```

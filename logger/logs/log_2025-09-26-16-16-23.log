@@ -1,0 +1,36 @@
+[2025-09-26 16:16:41,687] CustomBot - INFO - User: hii
+[2025-09-26 16:16:41,687] CustomBot - INFO - User: hii
+[2025-09-26 16:16:41,688] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:16:42,553] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:16:42,553] CustomBot - INFO - Assistant: hii
+[2025-09-26 16:16:42,553] CustomBot - INFO - Assistant: hii
+[2025-09-26 16:16:52,182] CustomBot - INFO - User: are you fine
+[2025-09-26 16:16:52,182] CustomBot - INFO - User: are you fine
+[2025-09-26 16:16:52,183] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:16:52,697] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:16:52,698] CustomBot - INFO - Assistant: yes
+[2025-09-26 16:16:52,699] CustomBot - INFO - Assistant: yes
+[2025-09-26 16:16:59,845] CustomBot - INFO - User: where are you
+[2025-09-26 16:16:59,846] CustomBot - INFO - User: where are you
+[2025-09-26 16:16:59,846] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:17:00,597] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:17:00,597] CustomBot - INFO - Assistant: online
+[2025-09-26 16:17:00,597] CustomBot - INFO - Assistant: online
+[2025-09-26 16:17:15,671] CustomBot - INFO - User: i have stomach pain right now/
+[2025-09-26 16:17:15,671] CustomBot - INFO - User: i have stomach pain right now/
+[2025-09-26 16:17:15,672] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:17:16,049] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:17:16,049] CustomBot - INFO - Assistant: Sorry to hear that. Have you eaten something unusual?
+[2025-09-26 16:17:16,049] CustomBot - INFO - Assistant: Sorry to hear that. Have you eaten something unusual?
+[2025-09-26 16:17:21,285] CustomBot - INFO - User: no
+[2025-09-26 16:17:21,286] CustomBot - INFO - User: no
+[2025-09-26 16:17:21,286] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:17:21,755] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:17:21,755] CustomBot - INFO - Assistant: Maybe try drinking some water or resting?
+[2025-09-26 16:17:21,755] CustomBot - INFO - Assistant: Maybe try drinking some water or resting?
+[2025-09-26 16:17:28,775] CustomBot - INFO - User: ol
+[2025-09-26 16:17:28,776] CustomBot - INFO - User: ol
+[2025-09-26 16:17:28,776] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:17:29,100] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:17:29,100] CustomBot - INFO - Assistant: ok
+[2025-09-26 16:17:29,101] CustomBot - INFO - Assistant: ok

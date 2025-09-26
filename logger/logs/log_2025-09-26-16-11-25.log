@@ -1,0 +1,12 @@
+[2025-09-26 16:11:39,430] CustomBot - INFO - User: i have pain in stomach.
+[2025-09-26 16:11:39,431] CustomBot - INFO - User: i have pain in stomach.
+[2025-09-26 16:11:39,431] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:11:40,325] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:11:40,325] CustomBot - INFO - Assistant: Have you eaten something unusual or had any other symptoms like nausea or fever?
+[2025-09-26 16:11:40,327] CustomBot - INFO - Assistant: Have you eaten something unusual or had any other symptoms like nausea or fever?
+[2025-09-26 16:11:49,319] CustomBot - INFO - User: yes
+[2025-09-26 16:11:49,320] CustomBot - INFO - User: yes
+[2025-09-26 16:11:49,321] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-09-26 16:11:49,952] CustomBot - INFO - Received response from Groq API.
+[2025-09-26 16:11:49,952] CustomBot - INFO - Assistant: You should drink water, rest, and consider over-the-counter stomach relief. If pain persists, see a doctor.
+[2025-09-26 16:11:49,956] CustomBot - INFO - Assistant: You should drink water, rest, and consider over-the-counter stomach relief. If pain persists, see a doctor.

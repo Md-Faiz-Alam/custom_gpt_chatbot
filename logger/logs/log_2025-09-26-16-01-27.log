@@ -1,0 +1,18 @@
+[2025-09-26 16:01:50,427] CustomBot - INFO - User: i have pain in stomach 
+[2025-09-26 16:01:50,427] CustomBot - INFO - User: i have pain in stomach 
+[2025-09-26 16:01:50,428] CustomBot - INFO - Sending messages to Groq API using model gpt-4...
+[2025-09-26 16:01:51,507] CustomBot - ERROR - Error communicating with Groq API: Error code: 404 - {'error': {'message': 'The model `gpt-4` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+[2025-09-26 16:01:51,508] CustomBot - INFO - Assistant: Sorry, I couldn't get a response at this time.
+[2025-09-26 16:01:51,512] CustomBot - INFO - Assistant: Sorry, I couldn't get a response at this time.
+[2025-09-26 16:02:03,915] CustomBot - INFO - User: why
+[2025-09-26 16:02:03,915] CustomBot - INFO - User: why
+[2025-09-26 16:02:03,915] CustomBot - INFO - Sending messages to Groq API using model gpt-4...
+[2025-09-26 16:02:04,286] CustomBot - ERROR - Error communicating with Groq API: Error code: 404 - {'error': {'message': 'The model `gpt-4` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+[2025-09-26 16:02:04,286] CustomBot - INFO - Assistant: Sorry, I couldn't get a response at this time.
+[2025-09-26 16:02:04,289] CustomBot - INFO - Assistant: Sorry, I couldn't get a response at this time.
+[2025-09-26 16:02:13,223] CustomBot - INFO - User: are you mad?
+[2025-09-26 16:02:13,223] CustomBot - INFO - User: are you mad?
+[2025-09-26 16:02:13,223] CustomBot - INFO - Sending messages to Groq API using model gpt-4...
+[2025-09-26 16:02:13,608] CustomBot - ERROR - Error communicating with Groq API: Error code: 404 - {'error': {'message': 'The model `gpt-4` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+[2025-09-26 16:02:13,609] CustomBot - INFO - Assistant: Sorry, I couldn't get a response at this time.
+[2025-09-26 16:02:13,612] CustomBot - INFO - Assistant: Sorry, I couldn't get a response at this time.

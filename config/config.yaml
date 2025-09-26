@@ -1,0 +1,30 @@
+app:
+ name: "Custom GPT Chatbot"
+ version: "0.1.0"
+ description: "A custom Bot application"
+
+api:
+ key: "${API_KEY}"
+ base_url: "https://api.groq.com/v1"
+ timeout: 30
+ retries: 3
+
+models:
+  default: "llama-3.3-70b-versatile"
+  available:
+    - "llama-3.3-70b-versatile"
+    - "llama3-70b-8192"
+    - "mixtral-8x7b-32768"
+    - "gemma2-9b-it"
+  settings:
+    temperature: 0.7
+    max_tokens: 1024
+
+logging:
+ level: "INFO"
+ log_directory: "logs"
+ log_file_format: "[%(asctime)s] %(name)s -%(levelname)s -%(message)s"
+ max_bytes: 10485760
+ backup_count: 5
+ rotate: true
+
