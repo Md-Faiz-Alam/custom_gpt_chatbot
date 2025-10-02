@@ -1,0 +1,52 @@
+[2025-10-02 14:04:38,192] CustomBot - INFO - User: hii
+[2025-10-02 14:04:38,193] CustomBot - INFO - User: hii
+[2025-10-02 14:04:38,193] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-10-02 14:04:38,845] CustomBot - INFO - Received response from Groq API.
+[2025-10-02 14:04:38,845] CustomBot - INFO - Assistant: Hi
+[2025-10-02 14:04:38,845] CustomBot - INFO - Assistant: Hi
+[2025-10-02 14:04:42,081] CustomBot - INFO - User: hello
+[2025-10-02 14:04:42,081] CustomBot - INFO - User: hello
+[2025-10-02 14:04:42,082] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-10-02 14:04:42,243] CustomBot - INFO - Received response from Groq API.
+[2025-10-02 14:04:42,244] CustomBot - INFO - Assistant: Hello
+[2025-10-02 14:04:42,244] CustomBot - INFO - Assistant: Hello
+[2025-10-02 14:04:46,720] CustomBot - INFO - User: how are you
+[2025-10-02 14:04:46,721] CustomBot - INFO - User: how are you
+[2025-10-02 14:04:46,721] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-10-02 14:04:46,878] CustomBot - INFO - Received response from Groq API.
+[2025-10-02 14:04:46,878] CustomBot - INFO - Assistant: I'm good, thanks.
+[2025-10-02 14:04:46,878] CustomBot - INFO - Assistant: I'm good, thanks.
+[2025-10-02 14:05:19,825] CustomBot - INFO - User: can you tell me if i have to learn genrative ai how could i learn can you give me roadmap
+[2025-10-02 14:05:19,825] CustomBot - INFO - User: can you tell me if i have to learn genrative ai how could i learn can you give me roadmap
+[2025-10-02 14:05:19,826] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-10-02 14:05:20,500] CustomBot - INFO - Received response from Groq API.
+[2025-10-02 14:05:20,500] CustomBot - INFO - Assistant: To learn Generative AI, follow this roadmap:
+
+1. **Math**: Linear Algebra, Calculus, Probability
+2. **Programming**: Python, PyTorch/TensorFlow
+3. **Deep Learning**: Coursera, Stanford CS231n
+4. **Generative Models**: GANs, VAEs, Transformers (research papers, tutorials)
+5. **Projects**: Implement models, experiment with datasets
+6. **Specialize**: Focus on areas like image, text, or music generation
+7. **Stay updated**: Follow research, blogs, and conferences (e.g., NIPS, ICLR)
+[2025-10-02 14:05:20,500] CustomBot - INFO - Assistant: To learn Generative AI, follow this roadmap:
+
+1. **Math**: Linear Algebra, Calculus, Probability
+2. **Programming**: Python, PyTorch/TensorFlow
+3. **Deep Learning**: Coursera, Stanford CS231n
+4. **Generative Models**: GANs, VAEs, Transformers (research papers, tutorials)
+5. **Projects**: Implement models, experiment with datasets
+6. **Specialize**: Focus on areas like image, text, or music generation
+7. **Stay updated**: Follow research, blogs, and conferences (e.g., NIPS, ICLR)
+[2025-10-02 14:05:44,726] CustomBot - INFO - User: can you suggeset me yt chane;
+[2025-10-02 14:05:44,726] CustomBot - INFO - User: can you suggeset me yt chane;
+[2025-10-02 14:05:44,727] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-10-02 14:05:46,175] CustomBot - INFO - Received response from Groq API.
+[2025-10-02 14:05:46,176] CustomBot - INFO - Assistant: 3Blue1Brown, Machine Learning Mastery, Sentdex, and Siraj Raval.
+[2025-10-02 14:05:46,176] CustomBot - INFO - Assistant: 3Blue1Brown, Machine Learning Mastery, Sentdex, and Siraj Raval.
+[2025-10-02 14:05:55,472] CustomBot - INFO - User: okay thanks
+[2025-10-02 14:05:55,472] CustomBot - INFO - User: okay thanks
+[2025-10-02 14:05:55,472] CustomBot - INFO - Sending messages to Groq API using model llama-3.3-70b-versatile...
+[2025-10-02 14:05:55,739] CustomBot - INFO - Received response from Groq API.
+[2025-10-02 14:05:55,740] CustomBot - INFO - Assistant: You're welcome
+[2025-10-02 14:05:55,740] CustomBot - INFO - Assistant: You're welcome

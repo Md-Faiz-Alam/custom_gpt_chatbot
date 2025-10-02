@@ -4,10 +4,11 @@ import os
 import yaml
 from dotenv import load_dotenv
 import re
-import streamlit as st  
+import streamlit as st
 
-# Load .env file if it exists
-load_dotenv()  
+# Load .env file
+load_dotenv()
+
 
 class AppConfig:
     ENV_VAR_PATTERN = re.compile(r"\$\{(\w+)\}")
@@ -20,7 +21,7 @@ class AppConfig:
     def _replace_env_vars(self, data):
         """
         Recursively replace placeholders like ${VAR} in config with
-        Streamlit secrets, environment variables, or leave as-is.
+        environment variables, Streamlit secrets, or leave as-is.
         """
         if isinstance(data, dict):
             return {k: self._replace_env_vars(v) for k, v in data.items()}
@@ -29,14 +30,17 @@ class AppConfig:
         elif isinstance(data, str):
             matches = self.ENV_VAR_PATTERN.findall(data)
             for var in matches:
-                # Try Streamlit secrets (lowercase fallback)
-                value = None
-                if hasattr(st, "secrets"):
-                    value = st.secrets.get(var.lower()) or st.secrets.get(var)
-                # Try environment variable
-                if not value:
-                    value = os.getenv(var)
-                # Replace if value found, else leave placeholder
+                # Try environment variable first
+                value = os.getenv(var)
+
+                # Then Streamlit secrets (if available)
+                if not value and hasattr(st, "secrets"):
+                    try:
+                        value = st.secrets.get(var.lower()) or st.secrets.get(var)
+                    except Exception:
+                        value = None
+
+                # Replace if value found
                 if value:
                     data = data.replace(f"${{{var}}}", value)
             return data
@@ -57,34 +61,42 @@ class AppConfig:
         config = self._replace_env_vars(config)
         return config
 
+
 # Global config object
 app_config = AppConfig()
 config = app_config.config
 
+
 def get_api_key():
     """
     Safely get the API key from:
-    1. Resolved config.yaml
-    2. Streamlit secrets (nested or flat)
-    3. Environment variable
+    1. Environment variable
+    2. Resolved config.yaml
+    3. Streamlit secrets (nested [api] or flat API_KEY)
     """
-    # 1. From config.yaml
+    # 1. Environment variable
+    api_key = os.getenv("API_KEY")
+    if api_key:
+        return api_key
+
+    # 2. Config.yaml
     if "api" in config and "key" in config["api"] and config["api"]["key"]:
         return config["api"]["key"]
 
-    # 2. Nested Streamlit secret
-    if hasattr(st, "secrets") and "api" in st.secrets and "key" in st.secrets["api"]:
-        return st.secrets["api"]["key"]
+    # 3. Streamlit nested secret
+    if hasattr(st, "secrets"):
+        try:
+            if "api" in st.secrets and "key" in st.secrets["api"]:
+                return st.secrets["api"]["key"]
+            if "API_KEY" in st.secrets:
+                return st.secrets["API_KEY"]
+        except Exception:
+            pass
 
-    # 3. Flat Streamlit secret
-    if hasattr(st, "secrets") and "API_KEY" in st.secrets:
-        return st.secrets["API_KEY"]
-
-    # 4. Environment variable fallback
-    return os.getenv("API_KEY")
+    return None
 
 
 API_KEY = get_api_key()
 
 if not API_KEY:
-    print("⚠️ Warning: API_KEY not found! Please check secrets/config/environment.")
+    print("⚠️ Warning: API_KEY not found! Please check your .env, config.yaml, or Streamlit secrets.")
